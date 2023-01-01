@@ -8,6 +8,8 @@
   <title>{{ item.idx }}번째 글입니다</title>
   <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js"></script>
+  <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+  <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
   <link rel="stylesheet" href="/css/view.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
@@ -71,11 +73,11 @@
       </form>
       <div id="likeit_box">
         <form action="/board/like" method="post">
-          <input type="hidden" name="likeit" value="{{item.likeit}}" />
-          <input type="hidden" name="index" value="{{item.idx}}" />
-          <button type="submit">
+          <input type="hidden" name="user_id" value="{{token}}" />
+          <input type="hidden" name="boardIdx" value="{{item.idx}}" />
+          <button type="submit" id="likeit_button">
             <span><img src="https://cdn-icons-png.flaticon.com/512/25/25297.png" width="30px" alt="좋아요"></span>
-            <span>{{ item.likeit }}</span>
+            <span class="likes_number">{{ item.likes|length }}</span>
           </button>
         </form>
       </div>
@@ -104,7 +106,7 @@
           <li class="comment_date">{{cl.register_date}}</li>
           <li>
             <form action="/board/delete" method="post">
-              <input type="hidden" name="boardIdx" id="commentIdx" value="{{item.idx}}" />
+              <input type="hidden" name="boardIdx" id="boardIdx" value="{{item.idx}}" />
               <input type="hidden" name="commentIdx" id="commentIdx" value="{{cl.idx}}" />
               <button type="submit" class="comment_delete" name="commentDelete">🆇</button>
             </form>
@@ -166,6 +168,7 @@
     const initialValue = '{{ item.content }}';
     const parsedElement = document.getElementById('parsedText');
     parsedElement.innerHTML = marked(he.decode(initialValue));
+    console.log(parsedElement.innerHTML)
   </script>
 </body>
 </script>

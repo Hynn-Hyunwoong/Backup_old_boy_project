@@ -150,6 +150,7 @@ if (token) {
 
 commentBtn.addEventListener("click", (e) => {
   if (commenterInput.value === "") {
+    e.preventDefault();
     return alert("비회원은 댓글을 작성할 수 없습니다");
   }
   try {
@@ -158,7 +159,7 @@ commentBtn.addEventListener("click", (e) => {
     }
   } catch (e) {
     alert(e);
-    event.preventDefault();
+    e.preventDefault();
   }
 });
 

@@ -6,7 +6,6 @@ router.get("/list", controller.getList);
 router.post("/list", controller.postList);
 router.get("/view", controller.getView);
 router.post("/add_comment", controller.postView);
-
 router.post('/like', controller.postLike);
 router.get("/write", controller.getWrite);
 router.post("/write",controller.postWrite);

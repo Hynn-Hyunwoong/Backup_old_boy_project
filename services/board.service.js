@@ -1,7 +1,7 @@
 const board = require("../repository/board.repository");
 
-exports.getList = async () => {
-  const result = await board.findAll();
+exports.getList = async (idx) => {
+  const result = await board.findAll(idx);
   return result;
 };
 
@@ -11,8 +11,8 @@ exports.postList = async (idx) => {
 }
 
 
-exports.getView = async (idx) => {
-  const result = await board.findOne(idx);
+exports.getView = async (viewData) => {
+  const result = await board.findOne(viewData);
   return result;
 };
 exports.getPrev = async (idx) => {
@@ -26,8 +26,8 @@ exports.postView = async (commentData) => {
     return await board.addComment(commentData)
 }
 
-exports.postLike = async (idx) => {
-  return await board.addLike(idx)
+exports.postLike = async (likeInfo) => {
+  return await board.addLike(likeInfo)
 }
 
 exports.postWrite = async (writeData) => {

@@ -45,8 +45,17 @@
         </ul>
       </div>
     </div>
-
     <table>
+      <!-- <span id="test"></span> -->
+      <div id="sortBox">
+        <form action="/board/list" method="get">
+          <select onchange="this.form.submit()" name="sort" id="sortSwitch">
+            <option value="idx">최신순</option>
+            <option value="hit">조회순</option>
+            <option value="like_count">추천순</option>
+          </select>
+        </form>
+      </div>
       <thead>
         <tr>
           <td class="th index">번호</td>
@@ -61,18 +70,18 @@
         {% for item in list %}
         <tr>
           <td>
-          <form action="/board/list?index=0" method="post">
+          <form action="/board/list" method="post">
             <input type="hidden" name="item_idx" value="{{ item.idx }}" />
             <button class="delete_item">🆇</button>
           </form>
           {{item.idx}}</td>
           <td>
-            <a href="/board/view?index={{item.idx}}">{{item.subject}}</a>
+            <a href="/board/view?index={{item.idx}}">{{item.subject}} <span style="color: #999; font-size: 0.8em; ">[{{item.comment_count}}]</span></a>
           </td>
           <td>{{item.writer}}</td>
           <td>{{item.register_date}}</td>
           <td>{{item.hit}}</td>
-          <td>{{item.likeit}}</td>
+          <td>{{item.like_count}}</td>
         </tr>
         {% endfor %}
       </tbody>

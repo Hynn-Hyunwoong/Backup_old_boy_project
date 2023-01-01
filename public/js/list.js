@@ -9,6 +9,18 @@ const paging = document.querySelector(".paging");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 
+
+//sort
+const sort = new URLSearchParams(window.location.search).get("sort");
+
+if (sort) {
+  let option = document.querySelector(`#sortSwitch option[value="${sort}"]`);
+  if (option) {
+    option.selected = true;
+  }
+}
+
+
 //paging
 let lastPage = 0;
 if (totalNumber % 10 == 0) {

@@ -3,15 +3,27 @@ const boardService = require("../services/board.service");
 exports.getList = async (req, res) => {
   const searchType = req.query.searchType;
   const search = req.query.search;
-  let list = await boardService.getList();
+  // console.log('sort :', req.query.sort)
+  let sort = 'idx' 
+  if (req.query.sort) {
+    sort = req.query.sort}
+  let list = await boardService.getList(sort);
+  // console.log(list)
   if (searchType && search) {
     list = list.filter((obj) => obj[searchType].includes(search));
   }
   res.render("board/list.html", { list, token: req.cookies.token });
 };
 
+exports.getSort = async (req, res) => {
+  console.log(req.query)
+  let list = await boardService.getSort(sort);
+  res.render("board/list.html", { list, token: req.cookies.token });
+}
+
+
 exports.postList = async (req, res) => {
-  console.log('req.body :',req.body);
+  // console.log('req.body :',req.body);
   const itemIdx = req.body.item_idx;
   await boardService.postList(itemIdx);
   res.redirect(`/board/list?index=0`);
@@ -21,22 +33,24 @@ exports.postList = async (req, res) => {
 exports.getView = async (req, res) => {
   const idx = req.query.index;
   const item = await boardService.getView(idx);
+  console.log('item :',item);
+  console.log(item.likes.length);
   const prevIdx = await boardService.getPrev(idx);
   const nextIdx = await boardService.getNext(idx);
   res.render("board/view.html", { item, prevIdx, nextIdx, token: req.cookies.token });
 };
 
-exports.postView = async (req, res, next) => {
+exports.postView = async (req, res) => {
     const commentData = req.body;
+    console.log('commentData :',commentData);
     await boardService.postView(commentData);
     res.redirect(`/board/view?index=${req.body.boardIdx}`);
-    next()
 };
 
 exports.postLike = async (req, res) => {
-  const idx = req.body.index;
+  console.log('req.body :',req.body);
   await boardService.postLike(req.body);
-  res.redirect(`/board/view?index=${idx}`);
+  res.redirect(`/board/view?index=${req.body.boardIdx}`);
 }
 exports.getWrite = (req, res) => {
   res.render("board/write.html", { token: req.cookies.token });
