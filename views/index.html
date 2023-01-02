@@ -1,223 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>::Old Boys::</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@100;300;400&family=Ubuntu:wght@500&display=swap"
-        rel="stylesheet">
-
-<body>
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@100;300;400&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="wrap">
-        <div id="header_wrap">
-            <div id="header">
-                <ul id="gnb">
-                    <li class="on"><a href="/">HOME</a></li>
-                    <li><a href="/board/list">BOARD</a></li>
-                    <li><img src="https://i.ibb.co/RTjgWsX/imageedit-22-4204026569.png" alt="logo" width="100%" /></li>
-                    {% if token %}
-                    <li style="color: darkorange;">{{ token }}님</a></li>
-                    <li><a href="/join/logout">LOGOUT</a></li>
-                    {% else %}
-                    <li><a href="/join/login">LOGIN</a></li>
-                    <li><a href="/join/join">JOIN</a></li>
-                    {% endif %}
-                    <div id="snb">
-                        <input type="checkbox" id="menu_icon" />
-                        <label for="menu_icon">
-                            <!--label은 inline style-->
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </label>
-                        <div id="hamburger_menu">
-                            <ul>
-                                <li><a href="/join/profile">PROFILE</a></li>
-                                <li><a href="#">ADMIN</a></li>
-                                <li><a href="#about">CONTACT</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-        </div>
-        <div id="intro_wrap">
-            <div id="intro">
-                <div id="intro_text">
-                    <h2>환영합니다</h2>
-                    <span class="text1">여기는 KGA 블록체인 8기,<br></span>
-                    <span class="text2">KCH</span>
-                    <p><span>팀 올드보이즈</span>입니다</p>
-                </div>
-                <div id="intro_visual">
-                    <!-- <img src="https://cdn-icons-png.flaticon.com/512/2091/2091665.png" alt=""> -->
-                    <img src="https://img.icons8.com/nolan/512/blockchain.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div id="visual_wrap">
-            <div id="visual">
-                <div id="slideSpace">
-                    <div id="slidePart">
-                        <div id="slideShow">
-                            <ul class="slides">
-                                <li>
-                                    <img src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/10_1400.jpg.webp"
-                                        alt="slide1" />
-                                </li>
-                                <li>
-                                    <img src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/14_1400.jpg.webp"
-                                        alt="slide2" />
-                                </li>
-                                <li>
-                                    <img src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/19_1400.jpg.webp"
-                                        alt="slide3" />
-                                </li>
-                                <li>
-                                    <img src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/21_1400.jpg.webp"
-                                        alt="slide4" />
-                                </li>
-                                <li>
-                                    <img src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/22_1400.jpg.webp"
-                                        alt="slide5" />
-                                </li>
-                            </ul>
-                            <div class="controller">
-                                <span class="prev">＜</span>
-                                <span class="next">＞</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="about_wrap">
-            <div id="about">
-                <h2 class="title T1">
-                    about<br>Us
-                </h2>
+      <div id="header_wrap">
+        <div id="header">
+          <ul id="gnb">
+            <li class="on"><a href="/">HOME</a></li>
+            <li><a href="/board/list">BOARD</a></li>
+            <li>
+              <img
+                src="https://i.ibb.co/RTjgWsX/imageedit-22-4204026569.png"
+                alt="logo"
+                width="100%"
+              />
+            </li>
+            {% if token %}
+            <li style="color: darkorange">{{ token }}님</li>
+            <li><a href="/join/logout">LOGOUT</a></li>
+            {% else %}
+            <li><a href="/join/login">LOGIN</a></li>
+            <li><a href="/join/join">JOIN</a></li>
+            {% endif %}
+            <div id="snb">
+              <input type="checkbox" id="menu_icon" />
+              <label for="menu_icon">
+                <!--label은 inline style-->
                 <span></span>
-                <div id="team_info">
-                    <ul>
-                        <li>
-                            <img src="https://kgablockchain.com/wp-content/uploads/2022/09/KakaoTalk_20220211_115642140.png"
-                                alt="">
-                            <p>블록체인 8기 <span>황상범</span></p>
-                            <img src="https://kgablockchain.com/wp-content/uploads/2022/09/%EB%8B%A4%EA%B0%81%ED%98%95-8.png"
-                                alt="">
-                            <div>
-                                <div class="textarea">
-                                    <p>안녕하세요.</p>
-                                    <p>현재 백엔드 개발자를 목표로 개발 공부 및 프로젝트를 진행하고 있는 황상범입니다. </p>
-                                    <p>이와 더불어 향후 우수한 블록체인 전문가로서 성장하기 위해 현재 부단히 노력하고 있습니다.</p>
-                                </div>
-                                <div>
-                                    <ul id="icon_list">
-                                        <li>
-                                            <a href="https://github.com/sangbeomhwang/">
-                                                <img src="https://i.ibb.co/S7jXWKw/free-icon-github-logo-25231.png" alt="" class="imgicon">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </li>
-                        <li>
-                            <img src="https://pbs.twimg.com/media/E-Z5-rXVQAMHL-S.png:small" width="210px"
-                                height="210px" alt="">
-                            <p>블록체인 8기 <span>최현웅</span></p>
-                            <img src="https://kgablockchain.com/wp-content/uploads/2022/09/%EB%8B%A4%EA%B0%81%ED%98%95-8.png"
-                                alt="">
-                            <div>
-                                <div class="textarea">
-                                    <p>반갑습니다.</p> 
-                                    <p>코로나에 빠져 지금도 따라가기 벅찬 올드보이즈 둘쨉니다.</p>
-                                    <p>뒤 없이 공부만해서 머리가 빠지고 있습니다.</p>
-                                </div>
-                                <div>
-                                    <ul id="icon_list">
-                                    <li>
-                                        <a href="https://github.com/Hynn-Hyunwoong/">
-                                            <img src="https://i.ibb.co/S7jXWKw/free-icon-github-logo-25231.png" alt="" class="imgicon">
-                                        </a>
-                                    </li>
-                                </ul>
-                                </div>
-                                </div>
-                        </li>
-                        <li>
-                            <img src="https://images.velog.io/images/chang626/post/c9533c4f-adbb-4411-bce4-b09293d64fbf/A03EACB4-4DFA-439A-A3FE-084635A89FE6.png"
-                                width="210px" height="210px" alt="">
-                            <p>블록체인 8기 <span>김주형</span></p>
-                            <img src="https://kgablockchain.com/wp-content/uploads/2022/09/%EB%8B%A4%EA%B0%81%ED%98%95-8.png"
-                                alt="">
-                                <div>
-                                    <div class="textarea">
-                                    <p>안녕하세요.</p>
-                                    <p>진짜 올드보이 첫째이옵니다.</p>
-                                    <p>좋은 팀원들을 만나서 프로젝트 기간을 즐겁게 보냈습니다.</p>
-                                    <p>그리고 백엔드란 친구도 상당히 매력적이군요.</p>
-                                    </div>
-                                    <div>
-                                        <ul id="icon_list">
-                                            <li>
-                                                <a href="https://github.com/nazzzo">
-                                                    <img src="https://i.ibb.co/S7jXWKw/free-icon-github-logo-25231.png" alt="" class="imgicon">
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div id="footer_wrap">
-            <div id="footer">
+                <span></span>
+                <span></span>
+              </label>
+              <div id="hamburger_menu">
                 <ul>
-                    <li>
-                        <a class="team_ob" href="#">TEAM Old Boys</a>
-                    </li>
-                    <li>
-                        <a class="team_ob" href="#">Joo Hyung Kim</a>
-                    </li>
-                    <li>
-                        <a class="team_ob" href="#">Hyung Uoong Choi</a>
-                    </li>
-                    <li>
-                        <a class="team_ob" href="#">Sang Beom Hwang</a>
-                    </li>
-                    <li>
-                        <a class="personal" href="#">행복하자 우리</a>
-                    </li>
+                  <li><a href="/join/profile">PROFILE</a></li>
+                  <li><a href="#">ADMIN</a></li>
+                  <li><a href="#about">CONTACT</a></li>
                 </ul>
-                <div id="footer_info">
-                    <h1 id="footer_logo">
-                        <img src="https://i.ibb.co/8KhmKPr/team-logo.png" alt="footer_logo" />
-                    </h1>
-                    <div id="team_info">
-                        <p>https://github.com/sangbeomhwang/board_old_boys.git</p>
-                        <p>
-                            1번 뇌섹남 : 김주형 / 2번 뇌섹남 : 최현웅 / 3번 뇌섹남 : 황상범
-                        </p>
-                        <p>TEAM Old Boys</p>
-                        <p class="copyright">
-                            Copyright © 2022. Kyungil Technical College. All rights
-                            reserved.
-                        </p>
-                    </div>
-                </div>
+              </div>
             </div>
+          </ul>
         </div>
+      </div>
+      <div id="intro_wrap">
+        <div id="intro">
+          <div id="intro_text">
+            <h2>환영합니다</h2>
+            <span class="text1">여기는 KGA 블록체인 8기,<br /></span>
+            <span class="text2">KCH</span>
+            <p><span>팀 올드보이즈</span>입니다</p>
+          </div>
+          <div id="intro_visual">
+            <!-- <img src="https://cdn-icons-png.flaticon.com/512/2091/2091665.png" alt=""> -->
+            <img src="https://img.icons8.com/nolan/512/blockchain.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="visual_wrap">
+        <div id="visual">
+          <div id="slideSpace">
+            <div id="slidePart">
+              <div id="slideShow">
+                <ul class="slides">
+                  <li>
+                    <img
+                      src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/10_1400.jpg.webp"
+                      alt="slide1"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/14_1400.jpg.webp"
+                      alt="slide2"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/19_1400.jpg.webp"
+                      alt="slide3"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/21_1400.jpg.webp"
+                      alt="slide4"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://s39927.pcdn.co/wp-content/uploads/presentations/1WvmeRM5hrgLf2EDfIKM6doVb51wjsVVC9HwPd1X2xvU/22_1400.jpg.webp"
+                      alt="slide5"
+                    />
+                  </li>
+                </ul>
+                <div class="controller">
+                  <span class="prev">＜</span>
+                  <span class="next">＞</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="about_wrap">
+        <div id="about">
+          <h2 class="title T1">about<br />Us</h2>
+          <span></span>
+          <div id="team_info">
+            <ul>
+              <li>
+                <img
+                  src="https://kgablockchain.com/wp-content/uploads/2022/09/KakaoTalk_20220211_115642140.png"
+                  alt=""
+                />
+                <p>블록체인 8기 <span>황상범</span></p>
+                <img
+                  src="https://kgablockchain.com/wp-content/uploads/2022/09/%EB%8B%A4%EA%B0%81%ED%98%95-8.png"
+                  alt=""
+                />
+                <div>
+                  <div class="textarea">
+                    <p>안녕하세요.</p>
+                    <p>
+                      현재 백엔드 개발자를 목표로 개발 공부 및 프로젝트를
+                      진행하고 있는 황상범입니다.
+                    </p>
+                    <p>
+                      이와 더불어 향후 우수한 블록체인 전문가로서 성장하기 위해
+                      현재 부단히 노력하고 있습니다.
+                    </p>
+                  </div>
+                  <div>
+                    <ul id="icon_list">
+                      <li>
+                        <a href="https://github.com/sangbeomhwang/">
+                          <img
+                            src="https://i.ibb.co/S7jXWKw/free-icon-github-logo-25231.png"
+                            alt=""
+                            class="imgicon"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img
+                  src="https://pbs.twimg.com/media/E-Z5-rXVQAMHL-S.png:small"
+                  width="210px"
+                  height="210px"
+                  alt=""
+                />
+                <p>블록체인 8기 <span>최현웅</span></p>
+                <img
+                  src="https://kgablockchain.com/wp-content/uploads/2022/09/%EB%8B%A4%EA%B0%81%ED%98%95-8.png"
+                  alt=""
+                />
+                <div>
+                  <div class="textarea">
+                    <p>반갑습니다.</p>
+                    <p>
+                      코로나에 빠져 지금도 따라가기 벅찬 올드보이즈 둘쨉니다.
+                    </p>
+                    <p>뒤 없이 공부만해서 머리가 빠지고 있습니다.</p>
+                  </div>
+                  <div>
+                    <ul id="icon_list">
+                      <li>
+                        <a href="https://github.com/Hynn-Hyunwoong/">
+                          <img
+                            src="https://i.ibb.co/S7jXWKw/free-icon-github-logo-25231.png"
+                            alt=""
+                            class="imgicon"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <div>
+                <img
+                  src="https://images.velog.io/images/chang626/post/c9533c4f-adbb-4411-bce4-b09293d64fbf/A03EACB4-4DFA-439A-A3FE-084635A89FE6.png"
+                  width="210px"
+                  height="210px"
+                  alt=""
+                />
+                <p>블록체인 8기 <span>김주형</span></p>
+                <img
+                  src="https://kgablockchain.com/wp-content/uploads/2022/09/%EB%8B%A4%EA%B0%81%ED%98%95-8.png"
+                  alt=""
+                />
+                <div>
+                  <div class="textarea">
+                    <p>안녕하세요.</p>
+                    <p>진짜 올드보이 첫째이옵니다.</p>
+                    <p>
+                      좋은 팀원들을 만나서 프로젝트 기간을 즐겁게 보냈습니다.
+                    </p>
+                    <p>그리고 백엔드란 친구도 상당히 매력적이군요.</p>
+                  </div>
+                </div>
+                <ul id="icon_list">
+                  <li>
+                    <a href="https://github.com/nazzzo">
+                      <img
+                        src="https://i.ibb.co/S7jXWKw/free-icon-github-logo-25231.png"
+                        alt=""
+                        class="imgicon"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="footer_wrap">
+        <div id="footer">
+          <ul>
+            <li>
+              <a class="team_ob" href="#">TEAM Old Boys</a>
+            </li>
+            <li>
+              <a class="team_ob" href="#">Joo Hyung Kim</a>
+            </li>
+            <li>
+              <a class="team_ob" href="#">Hyung Uoong Choi</a>
+            </li>
+            <li>
+              <a class="team_ob" href="#">Sang Beom Hwang</a>
+            </li>
+            <li>
+              <a class="personal" href="#">행복하자 우리</a>
+            </li>
+          </ul>
+          <div id="footer_info">
+            <h1 id="footer_logo">
+              <img
+                src="https://i.ibb.co/8KhmKPr/team-logo.png"
+                alt="footer_logo"
+              />
+            </h1>
+            <div id="team_info">
+              <p>https://github.com/sangbeomhwang/board_old_boys.git</p>
+              <p>
+                1번 뇌섹남 : 김주형 / 2번 뇌섹남 : 최현웅 / 3번 뇌섹남 : 황상범
+              </p>
+              <p>TEAM Old Boys</p>
+              <p class="copyright">
+                Copyright © 2022. Kyungil Technical College. All rights
+                reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="/js/home.js"></script>
-</body>
+  </body>
 </html>
