@@ -46,8 +46,6 @@ MVC 패턴을 이용한 개발은 Model, View, Controller를 각각 독립적인
 
 ## Repository, Service, Controller
 
-![image](https://files.virgool.io/upload/users/87947/posts/tueuub07nzfm/qsafdwbmblqx.png)
-
 위에서 설명한대로 MVC 패턴은 웹 개발에 필요한 요소들을
 Model, View, Controller로 구분지어서 설계하는 패턴입니다.
 
