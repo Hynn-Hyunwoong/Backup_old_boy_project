@@ -1,11 +1,48 @@
 # 프로젝트 내용정리
 
-화면 구동 영상 : https://thumbs.gfycat.com/ElderlyUnderstatedDipper-mobile.mp4
+화면 구동 영상 : https://youtu.be/r5K-sRjIKlk
 
 ![video1](https://im3.ezgif.com/tmp/ezgif-3-144cd0645e.gif)
 ![video2](https://im3.ezgif.com/tmp/ezgif-3-b6c9c3d04c.gif)
 ![video3](https://im3.ezgif.com/tmp/ezgif-3-604e9ab773.gif)
 ![video4](https://im3.ezgif.com/tmp/ezgif-3-f495dcc50c.gif)
+
+## MVC
+
+MVC 패턴은 Model-View-Controller의 약자로,
+하나의 웹 어플리케이션을 만들면서, 그 구성요소를 다음과 같은 세가지의 역할로
+구분지어 구조화하는 것을 말합니다
+
+Model: 요청에 대한 응답을 함에 있어서 필요한 구체적인 로직을 구현하는 요소
+DB와 상호작용하여 데이터를 저장 및 관리하고,
+사용자가 필요로 하는 정보를 View에 전달할 수 있는 형태로 재구성합니다
+
+View: 사용자에게 제공되는 인터페이스입니다
+웹 페이지나 앱을 통해 눈에 보이는 UI가 이 역할을 수행합니다
+
+Controller: Model과 View 사이의 중간 역할을 수행하는 요소입니다
+클라이언트의 요청을 수신하면 Model과 View를 오가며 적절한 응답을 찾아 제공합니다
+
+DB의 역할
+
+MySQL 등과 같은 관계형 데이터베이스는 MVC 패턴에서 주로 Model과 상호작용합니다
+저장소 속에서 사용자가 필요로 하는 데이터를 제공하는 것이 주된 역할입니다
+
+데이터의 흐름과 MVC 패턴의 장점
+
+웹 어플리케이션에서 요청을 수신하면, Controller는 Model에 그 요청을 전달하고
+Model이 DB로부터 필요한 데이터를 제공받아 요청에 알맞은 형태로 가공을 마치면
+이 작업물은 다시 Controller에 의해 View로 전달됩니다
+
+이렇게 MVC 패턴을 활용하여 개발을 진행하면 다음과 같은 장점을 가지게 됩니다
+유지보수에 용이합니다. MVC 패턴은 코드의 구조를 역할군에 맞게 분류하기 때문에
+좀 더 체계적인 관리가 가능해집니다
+
+코드의 재사용성이 높습니다
+MVC 패턴을 이용한 개발은 Model, View, Controller를 각각 독립적인 요소로 구현합니다
+이는 새로운 프로젝트를 진행할 때에도 필요에 따라 기존의 코드를 재사용할 수 있도록 돕습니다
+
+각 컴포넌트가 정해진 역할을 수행하기 때문에 코드가 깔끔하고 직관적입니다
 
 ## 프로젝트 일정
 
