@@ -1,9 +1,22 @@
 # 프로젝트 내용정리
 
-<video ref="videoRef" autoplay="autoplay" loop="" name="media" class="visual-vod" muted="">
-    <source
-        src="https://thumbs.gfycat.com/ElderlyUnderstatedDipper-mobile.mp4">
-</video>
+화면 구동 영상 : https://thumbs.gfycat.com/ElderlyUnderstatedDipper-mobile.mp4
+
+<iframe src='https://gfycat.com/ifr/MealyGoodCaribou' frameborder='0' scrolling='no' allowfullscreen width='640' height='444'></iframe>
+
+<div style='position:relative; padding-bottom:calc(62.50% + 44px)'><iframe src='https://gfycat.com/ifr/ReliableMiserableBlackbuck' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+
+<div style='position:relative; padding-bottom:calc(62.50% + 44px)'><iframe src='https://gfycat.com/ifr/TiredThirstyAltiplanochinchillamouse' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+
+<iframe src='https://gfycat.com/ifr/ThirdFakeAmericanalligator' frameborder='0' scrolling='no' allowfullscreen width='640' height='444'></iframe>
+
+## 프로젝트 일정
+
+1. 12/26(월) : view, public 디렉토리 내 정적 파일(html, css, js) 작업 수행
+2. 12/27(화) : join, login, board page를 분담하여 작업
+3. 12/28(수) : login 이슈 해결(login 시 token 값 유지해야 함, DB 요청 시 list 데이터 값 대조 문제)
+4. 12/29(목) : join(회원가입) 페이지 상 ID 중복체크 작업(중복체크 시 list 값 대조 --> 이후 대조 결과에 따른 이벤트 조건 설정)
+5. 12/30(금) : 추천(좋아요) 기능 및 정렬(최신순, 조회순, 추천순) 기능 추가
 
 ## 화면 구현
 
