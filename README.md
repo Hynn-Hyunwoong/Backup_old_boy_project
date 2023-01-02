@@ -1,5 +1,10 @@
 # 프로젝트 내용정리
 
+<video ref="videoRef" autoplay="autoplay" loop="" name="media" class="visual-vod" muted="">
+    <source
+        src="https://thumbs.gfycat.com/ElderlyUnderstatedDipper-mobile.mp4">
+</video>
+
 ## 화면 구현
 
 ### 1) 비로그인 시 게시판
