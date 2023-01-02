@@ -2,13 +2,10 @@
 
 화면 구동 영상 : https://thumbs.gfycat.com/ElderlyUnderstatedDipper-mobile.mp4
 
-<iframe src='https://gfycat.com/ifr/MealyGoodCaribou' frameborder='0' scrolling='no' allowfullscreen width='640' height='444'></iframe>
-
-<div style='position:relative; padding-bottom:calc(62.50% + 44px)'><iframe src='https://gfycat.com/ifr/ReliableMiserableBlackbuck' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
-
-<div style='position:relative; padding-bottom:calc(62.50% + 44px)'><iframe src='https://gfycat.com/ifr/TiredThirstyAltiplanochinchillamouse' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
-
-<iframe src='https://gfycat.com/ifr/ThirdFakeAmericanalligator' frameborder='0' scrolling='no' allowfullscreen width='640' height='444'></iframe>
+![video1](https://im3.ezgif.com/tmp/ezgif-3-144cd0645e.gif)
+![video2](https://im3.ezgif.com/tmp/ezgif-3-b6c9c3d04c.gif)
+![video3](https://im3.ezgif.com/tmp/ezgif-3-604e9ab773.gif)
+![video4](https://im3.ezgif.com/tmp/ezgif-3-f495dcc50c.gif)
 
 ## 프로젝트 일정
 
