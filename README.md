@@ -1,5 +1,4 @@
 # 프로젝트 내용정리
-<img width="80%" src="https://thumbs.gfycat.com/ElderlyUnderstatedDipper-mobile.mp4"/>
 
 ## 화면 구현
 
